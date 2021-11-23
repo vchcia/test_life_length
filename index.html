@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>生命时长测试</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        .waller{
+            width: 100%;
+            height: 1920px;
+            margin: 0 auto;
+            /* background: rgb(255, 0, 0); */
+        }
+        .tips{
+            font-size: 50px;
+            /* float: left; */
+            text-align: center;
+            display: block;
+            margin: 0 auto;
+            margin-top: 60px;
+        }
+        .main{
+            font-size: 60px;
+            /* float: left; */
+            text-align: center;
+            display: block;
+            margin: 0 auto;
+            margin-top: 60px;
+            color: red;
+        }
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="waller">
+        <div class="top">
+            <span class="tips">
+                测测你还能活多久
+            </span>
+        </div>
+        <div class="main">
+            <span id="zero"></span><span id="number">0</span>年
+        </div>
+        <div class="foot">
+            <h1>快截屏看看吧~</h1>
+        </div>
+    </div>
+</body>
+<script>
+    var number = document.getElementById('number')
+        zero = document.getElementById('zero')
+        z = 0;
+        i = 1;
+
+    
+        setInterval(function(){
+            if (i>10){
+                i = 1;
+            } 
+            if (z>11) {
+                z = 0;
+            }
+            number.innerText = i;
+            zero.innerText = z;
+            i++;
+            z++;
+        }, 10,100)
+        
+   
+
+</script>
+</html>
